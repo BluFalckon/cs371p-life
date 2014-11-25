@@ -17,7 +17,31 @@ using namespace std;
 // Abstract Cell
 // -------------
 
-AbstractCell::AbstractCell(){}
+AbstractCell::AbstractCell(bool alive) :
+	_alive(alive), _futureAlive(false)
+	{}
+
+void AbstractCell::changeState(){
+	if(_alive == true)
+		_futureAlive = false;
+	else
+		_futureAlive = true;
+}
+
+void AbstractCell::progress(){
+	_alive = _futureAlive;
+	_futureAlive = false;
+}
+
+// -------------------
+// ONLY FOR TESTING!!!
+// -------------------
+
+bool AbstractCell::getState(){
+	return _futureAlive;
+}
+
+
 
 // ----
 // Cell
@@ -26,12 +50,15 @@ AbstractCell::AbstractCell(){}
 Cell::Cell(AbstractCell* p){
 	_p = p;
 }
+
 Cell::Cell(const Cell& other){
 	_p = other._p->clone();
 }
+
 Cell::~Cell(){
 	delete _p;
 }
+
 Cell& Cell::operator= (const shape& other){
 	if(this == &other)
 		return *this;
@@ -40,15 +67,39 @@ Cell& Cell::operator= (const shape& other){
 	return *this;
 }
 
+// -------------------
+// ONLY FOR TESTING!!!
+// -------------------
+
+AbstractCell* Cell::getPointer(){
+	return _p;
+}
+
+
+
 // ----------
 // ConwayCell
 // ----------
 
-ConwayCell:
+ConwayCell::ConwayCell(bool alive) :
+	AbstractCell(alive)
+	{}
+
+
 
 // -----------
 // FredkinCell
 // -----------
+
+FredkinCell::FredkinCell(bool alive) :
+	AbstractCell(alive), _age(0)
+	{}
+
+void FredkinCell::incrementAge(){
+	++_age;
+}
+
+
 
 // -------
 // Life<T>

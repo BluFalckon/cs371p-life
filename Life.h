@@ -19,8 +19,15 @@ class AbstractCell{
 		bool _alive;
 		bool _futureAlive;
 	public:
-		AbstractCell();
+		AbstractCell(bool alive);
 		void changeState();
+		void progress();
+
+		// -------------------
+		// ONLY FOR TESTING!!!
+		// -------------------
+
+		bool getState();
 };
 
 // ----
@@ -36,13 +43,19 @@ class Cell{
 		~Cell();
 		Cell& operator = (const Cell& other);
 
+		// -------------------
+		// ONLY FOR TESTING!!!
+		// -------------------
+
+		AbstractCell* getPointer();
+
 };
 
 // ----------
 // ConwayCell
 // ----------
 
-class ConwayCell : public Cell{
+class ConwayCell : public AbstractCell{
 	public:
 		ConwayCell();
 };
@@ -51,17 +64,18 @@ class ConwayCell : public Cell{
 // FredkinCell
 // -----------
 
-class FredkinCell{
+class FredkinCell : public AbstractCell{
 	private:
 		int _age;
 	public:
 		FredkinCell();
-		incrementAge();
+		void incrementAge();
 };
 
 // -------
 // Life<T>
 // -------
+
 template <typename T>
 
 class Life<T>{
