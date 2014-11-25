@@ -1,5 +1,4 @@
-#ifndef Life_h
-#define Life_h
+
 
 // --------
 // includes
@@ -41,12 +40,13 @@ class Cell{
 		Cell(AbstractCell* p);
 		Cell(const Cell& other);
 		~Cell();
-		Cell& operator = (const Cell& other);
+		Cell& operator= (const Cell& other);
 
 		// -------------------
 		// ONLY FOR TESTING!!!
 		// -------------------
 
+		char getType();
 		AbstractCell* getPointer();
 
 };
@@ -57,7 +57,13 @@ class Cell{
 
 class ConwayCell : public AbstractCell{
 	public:
-		ConwayCell();
+		ConwayCell(bool alive);
+
+		// -------------------
+		// ONLY FOR TESTING!!!
+		// -------------------
+
+		char getType();
 };
 
 // -----------
@@ -68,8 +74,15 @@ class FredkinCell : public AbstractCell{
 	private:
 		int _age;
 	public:
-		FredkinCell();
+		FredkinCell(bool alive);
 		void incrementAge();
+
+		// -------------------
+		// ONLY FOR TESTING!!!
+		// -------------------
+
+		int getAge();
+		char getType();
 };
 
 // -------
@@ -78,7 +91,7 @@ class FredkinCell : public AbstractCell{
 
 template <typename T>
 
-class Life<T>{
+class Life{
 	private:
 		int _rows;
 		int _cols;

@@ -74,6 +74,9 @@ Cell& Cell::operator= (const shape& other){
 AbstractCell* Cell::getPointer(){
 	return _p;
 }
+char Cell::getType(){
+	return 'a';
+}
 
 
 
@@ -85,6 +88,13 @@ ConwayCell::ConwayCell(bool alive) :
 	AbstractCell(alive)
 	{}
 
+// -------------------
+// ONLY FOR TESTING!!!
+// -------------------
+
+char ConwayCell::getType(){
+	return 'c';
+}
 
 
 // -----------
@@ -96,7 +106,19 @@ FredkinCell::FredkinCell(bool alive) :
 	{}
 
 void FredkinCell::incrementAge(){
-	++_age;
+	if(_futureAlive)
+		++_age;
+}
+
+// -------------------
+// ONLY FOR TESTING!!!
+// -------------------
+
+int FredkinCell::getAge(){
+	return _age;
+}
+char FredkinCell::getType(){
+	return 'f';
 }
 
 
@@ -105,9 +127,10 @@ void FredkinCell::incrementAge(){
 // Life<T>
 // -------
 
-Life::Life(int rows, int cols) : _rows(rows), _cols(cols) {
+template <typename T>
+Life::Life<T>(int rows, int cols) : _rows(rows), _cols(cols) {
 	for (int i = 0; i < _rows; ++i) {
-		vector<T> temp(_cols, 0);
+		vector<T> temp(_cols, T(false));
 		_grid.push_back(temp);
 	}
 }
@@ -115,7 +138,55 @@ Life::Life(int rows, int cols) : _rows(rows), _cols(cols) {
 void Life::run(){
 	for(int i = 0; i < _rows; i++){
 		for(int j = 0; j < _cols; j++){
+			int numNeighborsAlive = 0;
+			if(i == 0 && j == 0){
+				//conway
+				if(_grid[i][j].getType() == 'c'){
+					if(_grid[i+1][j].getState())
+						++numNeighborsAlive;
+					if(_grid[i][j+1].getState())
+						++numNeighborsAlive;
+					if(_grid[i+1][j+1].getState())
+						++numNeighborsAlive;
+				}
+				//fredkin
+				else{
+					if(_grid[i+1][j].getState())
+						++numNeighborsAlive;
+					if(_grid[i][j+1].getState())
+						++numNeighborsAlive;
+				}
+			}//top left corner
+			else if(i == 0 && j == cols-1){
+				//conway
+				if(_grid[i][j].getType() == 'c'){
 
-		}
-	}
+				}
+				//fredkin
+				else{
+
+				}
+			}//top right corner
+			else if(i == rows-1 && j == 0){
+				//conway
+				if(_grid[i][j].getType() == 'c'){
+
+				}
+				//fredkin
+				else{
+
+				}
+			}//bottom left corner
+			else if(i == rows-1 && j == rows-1){
+				//conway
+				if(_grid[i][j].getType() == 'c'){
+
+				}
+				//fredkin
+				else{
+
+				}
+			}//bottom right corner
+		}//for j
+	}//for i
 }
