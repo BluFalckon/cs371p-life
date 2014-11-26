@@ -1,0 +1,54 @@
+commit 717f97de32536db4d451ea8086fa239f51f3b04f
+Author: Brian Jenkins <baj645@cs.utexas.edu>
+Date:   Tue Nov 25 18:29:09 2014 -0600
+
+    Doxygen
+
+commit 8f9cf8d236d767b59f1a911803497e130e5be226
+Author: Brian Jenkins <baj645@cs.utexas.edu>
+Date:   Tue Nov 25 18:02:45 2014 -0600
+
+    Unit tests working
+
+commit 95cd9f23c5412edcc9b8912fd8b6581023b98307
+Author: Brian Jenkins <baj645@cs.utexas.edu>
+Date:   Tue Nov 25 16:57:01 2014 -0600
+
+    Adding corner cases for grid
+
+commit 34e2029dffe44becd53a602495983138d55a61d8
+Author: Brian Jenkins <baj645@cs.utexas.edu>
+Date:   Tue Nov 25 16:56:24 2014 -0600
+
+    Adding corner cases for grid
+
+commit ac539d3ade09777acb6173509db7744df4d94cf8
+Author: Brian Jenkins <baj645@cs.utexas.edu>
+Date:   Mon Nov 24 20:19:51 2014 -0600
+
+    Began unit tests for classes
+
+commit 6f0a32eb06d2bb3e4830c33326ecea058f2a7577
+Author: Brian Jenkins <baj645@cs.utexas.edu>
+Date:   Mon Nov 24 18:19:03 2014 -0600
+
+    Created structure of program including Life.h
+
+commit 94701d76f52a4f0de6b05cdb5272bc98c8884bd6
+Merge: 8203339 630049f
+Author: Brian Jenkins <baj645@cs.utexas.edu>
+Date:   Sun Nov 23 15:59:13 2014 -0600
+
+    merge branch 'master' of https://github.com/BluFalckon/cs371p-life
+
+commit 82033398f0e6b8f3dc86a12eb1886f806721d6dd
+Author: Brian Jenkins <baj645@cs.utexas.edu>
+Date:   Sun Nov 23 15:54:41 2014 -0600
+
+    First commit
+
+commit 630049f6e2b3235967e725e999536e989c153d6f
+Author: BluFalckon <bjenkins92@gmail.com>
+Date:   Mon Nov 17 22:14:09 2014 -0600
+
+    Initial commit
