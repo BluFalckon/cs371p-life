@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['_5fage',['_age',['../classFredkinCell.html#a2486375e903e4fec0a43d1b183fc1098',1,'FredkinCell']]],
+  ['_5falive',['_alive',['../classAbstractCell.html#acc1709ac6a09244b76c38dca45577111',1,'AbstractCell']]],
+  ['_5fc',['_c',['../classDarwin_1_1Creature.html#a71b319f5c71064d81ec2c9c1d364864d',1,'Darwin::Creature']]],
+  ['_5fcols',['_cols',['../classDarwin.html#ac49efe7f9d5c912ca801d5a340676cdc',1,'Darwin::_cols()'],['../classLife.html#a45d8d22c1d4eee2ffdfe2b5c93606f70',1,'Life::_cols()']]],
+  ['_5ffuturealive',['_futureAlive',['../classAbstractCell.html#a15885d8b162f6f8c0fd224514359c876',1,'AbstractCell']]],
+  ['_5fgrid',['_grid',['../classLife.html#a58e39462eb29a8cb77ec900e9fced3c1',1,'Life']]],
+  ['_5finstructions',['_instructions',['../classSpecies.html#a3031b2d55bd822d63a727c0f5d2c29f2',1,'Species']]],
+  ['_5fmap',['_map',['../classDarwin.html#a03d03947ce846416b07bcb254e45575c',1,'Darwin']]],
+  ['_5fmoved',['_moved',['../classDarwin_1_1Creature.html#abbe97402203301b27268055b44422454',1,'Darwin::Creature']]],
+  ['_5fname',['_name',['../classSpecies.html#a98a599a937db499916102377ca916019',1,'Species']]],
+  ['_5forientation',['_orientation',['../classDarwin_1_1Creature.html#aeb94e3a5d7d9eb7ae322588f3dd85771',1,'Darwin::Creature']]],
+  ['_5fp',['_p',['../classCell.html#af8bb6306c15463d257e4775095b2f273',1,'Cell']]],
+  ['_5fpc',['_pc',['../classDarwin_1_1Creature.html#ace6138f75d3179f5a5ff7ace133ebff4',1,'Darwin::Creature']]],
+  ['_5fr',['_r',['../classDarwin_1_1Creature.html#ae520a2588cab6c369f8cc0c86a1278e2',1,'Darwin::Creature']]],
+  ['_5frows',['_rows',['../classDarwin.html#a8a97976eaff0edc76698bbf19e9fc79f',1,'Darwin::_rows()'],['../classLife.html#a806abcf0c349f8e76b48d622695c3ba6',1,'Life::_rows()']]],
+  ['_5fspecies',['_species',['../classDarwin_1_1Creature.html#a0a65327c765726627b5c30f5d152ad08',1,'Darwin::Creature']]],
+  ['_5fsymbol',['_symbol',['../classSpecies.html#a3c0581d50545605a9951a966bec16f30',1,'Species']]]
+];

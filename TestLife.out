@@ -1,0 +1,47 @@
+Running main() from gtest_main.cc
+[==========] Running 19 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 19 tests from Life
+[ RUN      ] Life.AbstractCell1
+[       OK ] Life.AbstractCell1 (0 ms)
+[ RUN      ] Life.AbstractCell2
+[       OK ] Life.AbstractCell2 (0 ms)
+[ RUN      ] Life.AbstractCell3
+[       OK ] Life.AbstractCell3 (0 ms)
+[ RUN      ] Life.changeState1
+[       OK ] Life.changeState1 (0 ms)
+[ RUN      ] Life.changeState2
+[       OK ] Life.changeState2 (0 ms)
+[ RUN      ] Life.changeState3
+[       OK ] Life.changeState3 (0 ms)
+[ RUN      ] Life.progress1
+[       OK ] Life.progress1 (0 ms)
+[ RUN      ] Life.progress2
+[       OK ] Life.progress2 (0 ms)
+[ RUN      ] Life.progress3
+[       OK ] Life.progress3 (0 ms)
+[ RUN      ] Life.Cell1
+[       OK ] Life.Cell1 (0 ms)
+[ RUN      ] Life.ConwayCell1
+[       OK ] Life.ConwayCell1 (0 ms)
+[ RUN      ] Life.ConwayCell2
+[       OK ] Life.ConwayCell2 (0 ms)
+[ RUN      ] Life.ConwayCell3
+[       OK ] Life.ConwayCell3 (0 ms)
+[ RUN      ] Life.FredkinCell1
+[       OK ] Life.FredkinCell1 (0 ms)
+[ RUN      ] Life.FredkinCell2
+[       OK ] Life.FredkinCell2 (0 ms)
+[ RUN      ] Life.FredkinCell3
+[       OK ] Life.FredkinCell3 (0 ms)
+[ RUN      ] Life.incrementAge1
+[       OK ] Life.incrementAge1 (0 ms)
+[ RUN      ] Life.incrementAge2
+[       OK ] Life.incrementAge2 (0 ms)
+[ RUN      ] Life.incrementAge3
+[       OK ] Life.incrementAge3 (0 ms)
+[----------] 19 tests from Life (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 19 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 19 tests.
