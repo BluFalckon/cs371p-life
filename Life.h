@@ -14,7 +14,7 @@ using namespace std;
 // ------------
 
 class AbstractCell{
-	private:
+	public:
 		bool _alive;
 		bool _futureAlive;
 	public:
@@ -27,6 +27,7 @@ class AbstractCell{
 		// -------------------
 
 		bool getState();
+		char getType();
 };
 
 // ----
@@ -89,13 +90,12 @@ class FredkinCell : public AbstractCell{
 // Life<T>
 // -------
 
-template <typename T>
 
 class Life{
-	private:
+	public:
 		int _rows;
 		int _cols;
-		vector <vector<T> > _grid;
+		vector <vector<AbstractCell> > _grid;
 	public:
 		Life(int rows, int cols);
 		void run();

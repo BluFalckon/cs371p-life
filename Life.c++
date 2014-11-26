@@ -40,6 +40,9 @@ void AbstractCell::progress(){
 bool AbstractCell::getState(){
 	return _futureAlive;
 }
+char AbstractCell::getType(){
+	return 'a';
+}
 
 
 
@@ -52,20 +55,20 @@ Cell::Cell(AbstractCell* p){
 }
 
 Cell::Cell(const Cell& other){
-	_p = other._p->clone();
+	//_p = other._p->clone();
 }
 
 Cell::~Cell(){
 	delete _p;
 }
 
-Cell& Cell::operator= (const shape& other){
-	if(this == &other)
-		return *this;
-	delete _p;
-	_p = other._p->clone();
-	return *this;
-}
+// Cell& Cell::operator= (const shape& other){
+// 	if(this == &other)
+// 		return *this;
+// 	delete _p;
+// 	//_p = other._p->clone();
+// 	return *this;
+// }
 
 // -------------------
 // ONLY FOR TESTING!!!
@@ -127,10 +130,9 @@ char FredkinCell::getType(){
 // Life<T>
 // -------
 
-template <typename T>
-Life::Life<T>(int rows, int cols) : _rows(rows), _cols(cols) {
+Life::Life(int rows, int cols) : _rows(rows), _cols(cols) {
 	for (int i = 0; i < _rows; ++i) {
-		vector<T> temp(_cols, T(false));
+		vector<AbstractCell> temp(_cols, AbstractCell(false));
 		_grid.push_back(temp);
 	}
 }
@@ -157,7 +159,7 @@ void Life::run(){
 						++numNeighborsAlive;
 				}
 			}//top left corner
-			else if(i == 0 && j == cols-1){
+			else if(i == 0 && j == _cols-1){
 				//conway
 				if(_grid[i][j].getType() == 'c'){
 
@@ -167,7 +169,7 @@ void Life::run(){
 
 				}
 			}//top right corner
-			else if(i == rows-1 && j == 0){
+			else if(i == _rows-1 && j == 0){
 				//conway
 				if(_grid[i][j].getType() == 'c'){
 
@@ -177,7 +179,7 @@ void Life::run(){
 
 				}
 			}//bottom left corner
-			else if(i == rows-1 && j == rows-1){
+			else if(i == _rows-1 && j == _cols-1){
 				//conway
 				if(_grid[i][j].getType() == 'c'){
 
